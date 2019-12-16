@@ -10,5 +10,5 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/go-rest-server']
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['beta', 'run', 'deploy', 'go-rest-server', '--image', 'gcr.io/$PROJECT_ID/go-rest-server', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
+    args: ['run', 'deploy', 'go-rest-server', '--image', 'gcr.io/$PROJECT_ID/go-rest-server', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
 images: ['gcr.io/$PROJECT_ID/go-rest-server']
