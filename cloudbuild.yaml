@@ -1,0 +1,7 @@
+steps:
+  - name: 'gcr.io/cloud-builders/go:alpine'
+    args: ['install', '.']
+    env: ['PROJECT_ROOT=github.com/m-saitou/go-rest-server']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/go-rest-server', '.']
+images: ['gcr.io/$PROJECT_ID/go-rest-server']
